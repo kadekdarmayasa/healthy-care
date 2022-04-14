@@ -122,6 +122,7 @@
 					p {
 						@include font.fontStyle(light);
 						text-shadow: -2px -2px 10px rgba($color: #fff, $alpha: 0.2), 2px 2px 10px rgba($color: #fff, $alpha: 0.3);
+						font-size: calc(0.5vmax + 0.6rem);
 					}
 				}
 			}
