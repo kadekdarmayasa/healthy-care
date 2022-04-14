@@ -1,0 +1,72 @@
+@use 'colors' as color;
+@use 'fonts' as font;
+
+/* home */
+#beranda {
+	@include font.fontStyle();
+	scroll-margin-top: 80px;
+	width: 100%;
+	.container {
+		display: flex;
+		margin: 40px auto 0;
+		justify-content: center;
+		align-items: center;
+
+		.description {
+			margin-top: 40px;
+		}
+
+		.heading {
+			@include font.fontStyle(bold, 'Poppins', sans-serif);
+			margin-bottom: 40px;
+			width: 80%;
+			font-size: calc(0.6vmax + 1.2rem);
+			span {
+				color: color.$blue-color;
+			}
+		}
+
+		.purpose {
+			@include font.fontStyle(regular, 'Poppins', sans-serif);
+			margin-bottom: 20px;
+			width: 80%;
+			color: color.$grey-color;
+			line-height: 1.8;
+			font-size: calc(0.5vmax + 0.6rem);
+		}
+
+		.hubungi-kami {
+			margin-top: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: color.$lightblue-color;
+			width: 200px;
+			height: 60px;
+			border-radius: 8px;
+			cursor: pointer;
+			box-shadow: 0 5px 26px color.$lightblue-color;
+			transition: 0.3s;
+
+			&:hover {
+				background-color: color.$lightblue-hover-color;
+			}
+
+			a {
+				@include font.fontStyle(medium, 'Poppins');
+				color: black;
+			}
+
+			img.send {
+				margin-left: 10px;
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		img.hero {
+			width: 60%;
+		}
+	}
+}
+/* akhir home */

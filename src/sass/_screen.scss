@@ -1,0 +1,142 @@
+@use 'navbar';
+
+@media screen and (min-width: 1220px) {
+	#beranda {
+		.container {
+			.heading {
+				margin-top: -120px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	#beranda {
+		.container {
+			align-items: center;
+			img.hero {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#tatacara {
+		.container {
+			.carousel5M,
+			.carousel-jenis-olahraga,
+			.carousel-makanan-bergizi {
+				.carousel-cell {
+					width: 50%;
+					height: 250px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	nav {
+		backdrop-filter: none;
+		background-color: rgb(255, 255, 255);
+		.nav-links {
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			position: fixed;
+			display: flex;
+			top: 80px;
+			right: 120%;
+			bottom: 0;
+			left: 0;
+			z-index: 4;
+			width: auto;
+			height: auto;
+			opacity: 0;
+			background-color: rgba(255, 255, 255, 0.8);
+			box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.07);
+			backdrop-filter: blur(8px);
+			transition: 0.3s ease;
+
+			&.active {
+				opacity: 1;
+				right: 0;
+			}
+
+			li {
+				margin-right: 0;
+				a {
+					text-align: left;
+					font-size: 1.2rem;
+				}
+			}
+
+			li:nth-child(3) {
+				margin-right: 0;
+			}
+		}
+
+		.hamburger-menu {
+			display: flex;
+		}
+	}
+
+	#beranda {
+		.container {
+			flex-direction: column;
+			text-align: center;
+			align-items: flex-start;
+
+			.description {
+				margin-top: 0;
+				order: 2;
+				& > div:not(:last-child) {
+					width: 100%;
+				}
+			}
+
+			.heading {
+				margin: auto;
+				margin-top: 50px;
+				margin-bottom: 40px;
+			}
+
+			.purpose {
+				margin: auto;
+				margin-bottom: 20px;
+			}
+
+			.hubungi-kami {
+				margin: auto;
+				margin-top: 40px;
+				margin-bottom: 50px;
+			}
+
+			img.hero {
+				margin: auto;
+				order: 1;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#tatacara {
+		.container {
+			.carousel5M,
+			.carousel-jenis-olahraga,
+			.carousel-makanan-bergizi {
+				.flickity-prev-next-button {
+					width: 25px;
+					height: 25px;
+				}
+				.carousel-cell {
+					width: 100%;
+					height: 250px;
+				}
+			}
+		}
+	}
+}

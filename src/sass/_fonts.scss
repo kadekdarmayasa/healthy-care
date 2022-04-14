@@ -1,0 +1,50 @@
+/* Import Fonts */
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+/* -------- */
+@mixin fontStyle($weight: regular, $fontName: 'Poppins', $fallbackFont: sans-serif) {
+	$fontFamily: $fontName, $fallbackFont;
+	@if $weight == light {
+		font-family: $fontFamily;
+		font-weight: 300;
+	} @else if $weight == regular {
+		font-family: $fontFamily;
+		font-weight: 400;
+	} @else if $weight == medium {
+		font-family: $fontFamily;
+		font-weight: 500;
+	} @else if $weight == semibold {
+		font-family: $fontFamily;
+		font-weight: 600;
+	} @else {
+		font-family: $fontFamily;
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,25 @@
+@use 'fonts' as font;
+@use 'colors' as color;
+
+#testimoni {
+	scroll-margin-top: 150px;
+
+	.container {
+		margin: 150px auto 40px;
+
+		.heading-2 {
+			@include font.fontStyle(bold);
+			text-align: center;
+			font-size: calc(0.7vmax + 1rem);
+			margin-bottom: 20px;
+		}
+
+		.paragraph {
+			@include font.fontStyle(regular);
+			color: color.$grey-color;
+			line-height: 2;
+			text-align: center;
+			font-size: calc(0.5vmax + 0.6rem);
+		}
+	}
+}
