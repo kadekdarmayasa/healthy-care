@@ -2,16 +2,17 @@
 @use 'colors' as color;
 
 #testimoni {
+	@include font.fontStyle();
 	scroll-margin-top: 150px;
 
 	.container {
-		margin: 150px auto 40px;
+		margin: 150px auto 50px;
 
 		.heading-2 {
 			@include font.fontStyle(bold);
 			text-align: center;
 			font-size: calc(0.7vmax + 1rem);
-			margin-bottom: 20px;
+			margin-bottom: 5px;
 		}
 
 		.paragraph {
@@ -19,7 +20,67 @@
 			color: color.$grey-color;
 			line-height: 2;
 			text-align: center;
-			font-size: calc(0.5vmax + 0.6rem);
+			font-size: calc(0.5vmax + 0.7rem);
+		}
+
+		.carousel-container {
+			margin-top: 60px;
+
+			.carousel-cell {
+				width: 40%;
+				height: 470px;
+				margin-right: 20px;
+				background-color: rgba($color: color.$white-color, $alpha: 1);
+				backdrop-filter: blur(5px);
+				border-radius: 18px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				color: color.$grey-color;
+				padding: 1.5em 2em;
+
+				figure {
+					height: 100px;
+					width: 100px;
+					border-radius: 50%;
+					overflow: hidden;
+					position: relative;
+
+					&::after {
+						content: '';
+						display: block;
+						background-color: rgba($color: color.$purple-color, $alpha: 0.4);
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						right: 0;
+					}
+				}
+
+				.name {
+					@include font.fontStyle(bold);
+					font-size: 1.4rem;
+				}
+
+				.instagram {
+					@include font.fontStyle(medium);
+				}
+
+				.message {
+					@include font.fontStyle(regular);
+					line-height: 2;
+					font-size: calc(0.7vmin + 0.6rem);
+					text-align: center;
+					margin: 20px auto;
+				}
+
+				.date {
+					@include font.fontStyle(semibold);
+					position: absolute;
+					bottom: 20px;
+				}
+			}
 		}
 	}
 }

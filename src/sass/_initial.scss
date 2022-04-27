@@ -1,4 +1,3 @@
-/* initial style */
 :root {
 	scroll-behavior: smooth;
 	font-size: 16px;
@@ -8,7 +7,7 @@ body {
 	max-width: 1600px;
 	position: relative;
 	margin: auto;
-	height: 9999px;
+	z-index: 1;
 }
 
 body::after {
@@ -22,7 +21,7 @@ body::after {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgb(250, 250, 250);
+	background-color: whitesmoke;
 }
 
 body > * {
@@ -33,5 +32,3 @@ body > * {
 .container {
 	width: 85%;
 }
-
-/* akir initial */

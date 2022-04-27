@@ -1,4 +1,3 @@
-/* Import Fonts */
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Bold.ttf") format("truetype");
@@ -24,8 +23,6 @@
   src: url("../fonts/Poppins-Light.ttf") format("truetype");
   font-weight: 300;
 }
-/* -------- */
-/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -61,8 +58,6 @@ img {
   line-height: 1;
 }
 
-/* Akhir reset */
-/* initial style */
 :root {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -72,7 +67,7 @@ body {
   max-width: 1600px;
   position: relative;
   margin: auto;
-  height: 9999px;
+  z-index: 1;
 }
 
 body::after {
@@ -86,7 +81,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(250, 250, 250);
+  background-color: whitesmoke;
 }
 
 body > * {
@@ -98,8 +93,6 @@ body > * {
   width: 85%;
 }
 
-/* akir initial */
-/* Navbar */
 nav {
   width: 100%;
   height: 80px;
@@ -119,13 +112,13 @@ nav .container {
   align-items: center;
   justify-content: space-between;
 }
-nav .navbar-brand a {
+nav .navbar-brand h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: calc(2vmin + 0.8rem);
   color: rgb(34, 34, 34);
 }
-nav .navbar-brand a span {
+nav .navbar-brand h2 span {
   color: #0066ff;
 }
 nav .nav-links {
@@ -147,17 +140,7 @@ nav .nav-links li a:hover {
   color: #0066ff;
 }
 nav .nav-links li:nth-child(3) {
-  margin-right: 2em;
-}
-nav .nav-links .mode {
-  width: 35px;
-  height: 35px;
-  padding: 0.5em;
-  border-radius: 50%;
-  background-color: #e4e4e4;
-}
-nav .nav-links .mode:hover {
-  cursor: pointer;
+  margin-right: 0;
 }
 nav .hamburger-menu {
   display: none;
@@ -190,7 +173,7 @@ nav .hamburger-menu input[type=checkbox]:checked ~ span:nth-child(4) {
   transform: translateY(-7px) rotate(-225deg);
 }
 nav .hamburger-menu span {
-  background-color: black;
+  background-color: #000;
   display: inline-block;
   height: 3px;
   width: 28px;
@@ -198,8 +181,6 @@ nav .hamburger-menu span {
   transition: 0.4s ease;
 }
 
-/* Akhir Navbar */
-/* home */
 #beranda {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -232,7 +213,7 @@ nav .hamburger-menu span {
   width: 80%;
   color: rgb(95, 95, 95);
   line-height: 1.8;
-  font-size: calc(0.5vmax + 0.6rem);
+  font-size: calc(0.5vmax + 0.7rem);
 }
 #beranda .container .hubungi-kami {
   margin-top: 40px;
@@ -253,7 +234,7 @@ nav .hamburger-menu span {
 #beranda .container .hubungi-kami a {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: black;
+  color: #000;
 }
 #beranda .container .hubungi-kami img.send {
   margin-left: 10px;
@@ -264,7 +245,6 @@ nav .hamburger-menu span {
   width: 60%;
 }
 
-/* akhir home */
 #tatacara {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -283,7 +263,7 @@ nav .hamburger-menu span {
 #tatacara .container .heading-3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: calc(0.4vmax + 0.9rem);
+  font-size: calc(0.5vmax + 0.9rem);
   margin-top: 80px;
   line-height: 1.5;
 }
@@ -293,7 +273,7 @@ nav .hamburger-menu span {
   color: rgb(95, 95, 95);
   line-height: 2;
   text-align: justify;
-  font-size: calc(0.5vmax + 0.6rem);
+  font-size: calc(0.5vmax + 0.7rem);
 }
 #tatacara .container .paragraph:nth-child(4) {
   margin-top: 50px;
@@ -305,7 +285,7 @@ nav .hamburger-menu span {
   height: 250px;
   margin-top: 30px;
   margin-right: 20px;
-  border-radius: 10px;
+  border-radius: 18px;
   counter-increment: carousel-cell;
 }
 #tatacara .container .carousel5M .carousel-cell figure,
@@ -315,7 +295,7 @@ nav .hamburger-menu span {
   width: 100%;
   height: 100%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 18px;
 }
 #tatacara .container .carousel5M .carousel-cell figure::after,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure::after,
@@ -324,7 +304,7 @@ nav .hamburger-menu span {
   display: block;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   position: absolute;
-  border-radius: 10px;
+  border-radius: 18px;
   top: 0;
   left: 0;
   right: 0;
@@ -335,13 +315,13 @@ nav .hamburger-menu span {
 #tatacara .container .carousel5M .carousel-cell figure img,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure img,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure img {
-  border-radius: 10px;
+  border-radius: 18px;
 }
 #tatacara .container .carousel5M .carousel-cell figure figcaption,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure figcaption,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure figcaption {
   position: absolute;
-  color: white;
+  color: #ffffff;
   bottom: 18px;
   right: 18px;
   z-index: 2;
@@ -377,7 +357,7 @@ nav .hamburger-menu span {
   vertical-align: middle;
   color: rgb(95, 95, 95);
   margin-bottom: 8px;
-  font-size: calc(0.5vmax + 0.6rem);
+  font-size: calc(0.5vmax + 0.7rem);
 }
 #tatacara .container .makanan-bergizi .carousel-makanan-bergizi figcaption p {
   font-family: "Poppins", sans-serif;
@@ -386,9 +366,160 @@ nav .hamburger-menu span {
   font-size: calc(0.5vmax + 0.6rem);
 }
 
+#testimoni {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  scroll-margin-top: 150px;
+}
+#testimoni .container {
+  margin: 150px auto 50px;
+}
+#testimoni .container .heading-2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: calc(0.7vmax + 1rem);
+  margin-bottom: 5px;
+}
+#testimoni .container .paragraph {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgb(95, 95, 95);
+  line-height: 2;
+  text-align: center;
+  font-size: calc(0.5vmax + 0.7rem);
+}
+#testimoni .container .carousel-container {
+  margin-top: 60px;
+}
+#testimoni .container .carousel-container .carousel-cell {
+  width: 40%;
+  height: 470px;
+  margin-right: 20px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(95, 95, 95);
+  padding: 1.5em 2em;
+}
+#testimoni .container .carousel-container .carousel-cell figure {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+#testimoni .container .carousel-container .carousel-cell figure::after {
+  content: "";
+  display: block;
+  background-color: rgba(59, 84, 147, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#testimoni .container .carousel-container .carousel-cell .name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+#testimoni .container .carousel-container .carousel-cell .instagram {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+#testimoni .container .carousel-container .carousel-cell .message {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  font-size: calc(0.7vmin + 0.6rem);
+  text-align: center;
+  margin: 20px auto;
+}
+#testimoni .container .carousel-container .carousel-cell .date {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  bottom: 20px;
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 300px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+footer .container {
+  color: rgb(34, 34, 34);
+  margin: auto;
+  width: 84%;
+}
+footer .container .first-row {
+  display: flex;
+  text-align: left;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+footer .container .first-row h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: calc(2vmin + 0.8rem);
+}
+footer .container .first-row h2 span {
+  color: #0066ff;
+}
+footer .container .first-row .alamat .heading-3,
+footer .container .first-row .tags .heading-3,
+footer .container .first-row .tautan .heading-3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+footer .container .first-row .alamat p,
+footer .container .first-row .tags p,
+footer .container .first-row .tautan p {
+  color: rgb(95, 95, 95);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+footer .container .first-row .tautan {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .first-row .tautan > a {
+  color: rgb(95, 95, 95);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+footer .container .first-row .tautan > a:hover {
+  color: #0066ff;
+}
+footer .container .second-row {
+  text-align: center;
+  margin-top: 60px;
+}
+footer .container .second-row p {
+  color: rgb(95, 95, 95);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
 @media screen and (min-width: 1220px) {
   #beranda .container .heading {
     margin-top: -120px;
+  }
+}
+@media screen and (min-width: 1330px) {
+  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+    width: 30%;
   }
 }
 @media screen and (max-width: 1220px) {
@@ -399,6 +530,37 @@ nav .hamburger-menu span {
     width: 50%;
   }
 }
+@media screen and (min-width: 900px) {
+  footer .container .first-row {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer {
+    margin-top: 200px;
+  }
+  footer .container .first-row h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  footer .container .first-row .alamat,
+footer .container .first-row .tags,
+footer .container .first-row .tautan {
+    margin-top: 20px;
+  }
+  footer .container .first-row .alamat .heading-3,
+footer .container .first-row .tags .heading-3,
+footer .container .first-row .tautan .heading-3 {
+    font-size: 1.2rem;
+  }
+  footer .container .first-row .alamat p,
+footer .container .first-row .tags p {
+    font-size: 1rem;
+  }
+  footer .container .second-row p {
+    font-size: 1rem;
+  }
+}
 @media screen and (max-width: 992px) {
   #tatacara .container .carousel5M .carousel-cell,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell,
@@ -406,11 +568,15 @@ nav .hamburger-menu span {
     width: 50%;
     height: 250px;
   }
+
+  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 768px) {
   nav {
     backdrop-filter: none;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
   }
   nav .nav-links {
     flex-direction: column;
@@ -480,8 +646,16 @@ nav .hamburger-menu span {
     order: 1;
     width: 100%;
   }
+
+  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 576px) {
+  #beranda .container {
+    width: 100%;
+  }
+
   #tatacara .container .carousel5M .flickity-prev-next-button,
 #tatacara .container .carousel-jenis-olahraga .flickity-prev-next-button,
 #tatacara .container .carousel-makanan-bergizi .flickity-prev-next-button {
@@ -494,27 +668,13 @@ nav .hamburger-menu span {
     width: 100%;
     height: 250px;
   }
-}
-#testimoni {
-  scroll-margin-top: 150px;
-}
-#testimoni .container {
-  margin: 150px auto 40px;
-}
-#testimoni .container .heading-2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  text-align: center;
-  font-size: calc(0.7vmax + 1rem);
-  margin-bottom: 20px;
-}
-#testimoni .container .paragraph {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: rgb(95, 95, 95);
-  line-height: 2;
-  text-align: center;
-  font-size: calc(0.5vmax + 0.6rem);
+
+  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+    width: 90%;
+  }
+  #tatacara ~ #testimoni .container .carousel-container .carousel-cell .message {
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

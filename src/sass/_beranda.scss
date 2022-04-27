@@ -1,11 +1,11 @@
 @use 'colors' as color;
 @use 'fonts' as font;
 
-/* home */
 #beranda {
 	@include font.fontStyle();
 	scroll-margin-top: 80px;
 	width: 100%;
+
 	.container {
 		display: flex;
 		margin: 40px auto 0;
@@ -32,7 +32,7 @@
 			width: 80%;
 			color: color.$grey-color;
 			line-height: 1.8;
-			font-size: calc(0.5vmax + 0.6rem);
+			font-size: calc(0.5vmax + 0.7rem);
 		}
 
 		.hubungi-kami {
@@ -54,7 +54,7 @@
 
 			a {
 				@include font.fontStyle(medium, 'Poppins');
-				color: black;
+				color: color.$black2-color;
 			}
 
 			img.send {
@@ -69,4 +69,3 @@
 		}
 	}
 }
-/* akhir home */
