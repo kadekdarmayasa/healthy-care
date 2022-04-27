@@ -678,10 +678,10 @@ footer .container .first-row .tags p {
 }
 @media screen and (max-width: 476px) {
   #tatacara ~ #testimoni .container {
-    width: 90%;
+    width: 88%;
   }
   #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
-    width: 100%;
+    width: 90%;
   }
 }
 
