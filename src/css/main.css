@@ -670,7 +670,7 @@ footer .container .first-row .tags p {
   }
 
   #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
-    width: 90%;
+    width: 100%;
   }
   #tatacara ~ #testimoni .container .carousel-container .carousel-cell .message {
     font-size: 0.9rem;
