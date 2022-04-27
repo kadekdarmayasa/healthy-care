@@ -676,5 +676,13 @@ footer .container .first-row .tags p {
     font-size: 0.9rem;
   }
 }
+@media screen and (max-width: 476px) {
+  #tatacara ~ #testimoni .container {
+    width: 100%;
+  }
+  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
