@@ -25,6 +25,7 @@
 
 		.carousel-container {
 			margin-top: 60px;
+			height: 100%;
 
 			.carousel-cell {
 				width: 40%;
@@ -38,6 +39,7 @@
 				align-items: center;
 				color: color.$grey-color;
 				padding: 1.5em 2em;
+				counter-increment: carousel-cell;
 
 				figure {
 					height: 100px;

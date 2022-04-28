@@ -200,7 +200,7 @@ nav .hamburger-menu span {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   margin-bottom: 40px;
-  width: 80%;
+  width: 70%;
   font-size: calc(0.6vmax + 1.2rem);
 }
 #beranda .container .heading span {
@@ -242,7 +242,7 @@ nav .hamburger-menu span {
   height: 20px;
 }
 #beranda .container img.hero {
-  width: 60%;
+  width: 50%;
 }
 
 #tatacara {
@@ -351,7 +351,7 @@ nav .hamburger-menu span {
   font-size: 1rem;
   list-style: none;
   padding: 6px 10px 5px 35px;
-  background: url("../img/checklist.png") no-repeat;
+  background: url("../img/checklist.webp") no-repeat;
   background-position-x: left;
   background-position-y: center;
   vertical-align: middle;
@@ -391,6 +391,7 @@ nav .hamburger-menu span {
 }
 #testimoni .container .carousel-container {
   margin-top: 60px;
+  height: 100%;
 }
 #testimoni .container .carousel-container .carousel-cell {
   width: 40%;
@@ -404,6 +405,7 @@ nav .hamburger-menu span {
   align-items: center;
   color: rgb(95, 95, 95);
   padding: 1.5em 2em;
+  counter-increment: carousel-cell;
 }
 #testimoni .container .carousel-container .carousel-cell figure {
   height: 100px;
@@ -631,6 +633,7 @@ footer .container .first-row .tags p {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 40px;
+    width: 80%;
   }
   #beranda .container .purpose {
     margin: auto;

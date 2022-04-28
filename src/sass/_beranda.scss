@@ -19,7 +19,7 @@
 		.heading {
 			@include font.fontStyle(bold, 'Poppins', sans-serif);
 			margin-bottom: 40px;
-			width: 80%;
+			width: 70%;
 			font-size: calc(0.6vmax + 1.2rem);
 			span {
 				color: color.$blue-color;
@@ -65,7 +65,7 @@
 		}
 
 		img.hero {
-			width: 60%;
+			width: 50%;
 		}
 	}
 }
