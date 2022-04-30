@@ -1,6 +1,27 @@
 @use 'fonts' as font;
 @use 'colors' as color;
 
+body.dark {
+	#tatacara {
+		.heading-2,
+		.heading-3 {
+			color: color.$white-color;
+		}
+
+		.paragraph {
+			color: color.$grey2-color;
+		}
+
+		.makanan-bergizi {
+			.kriteria {
+				li {
+					color: color.$grey2-color;
+				}
+			}
+		}
+	}
+}
+
 #tatacara {
 	@include font.fontStyle();
 	scroll-margin-top: 150px;
@@ -9,14 +30,14 @@
 		margin: 100px auto 0;
 
 		.heading-2 {
-			@include font.fontStyle(bold);
+			@include font.fontStyle(semibold);
 			text-align: center;
 			font-size: calc(0.7vmax + 1rem);
 			margin-bottom: 30px;
 		}
 
 		.heading-3 {
-			@include font.fontStyle(bold);
+			@include font.fontStyle(semibold);
 			font-size: calc(0.5vmax + 0.9rem);
 			margin-top: 80px;
 			line-height: 1.5;

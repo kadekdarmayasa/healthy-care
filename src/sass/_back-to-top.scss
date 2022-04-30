@@ -1,0 +1,32 @@
+@use 'colors' as color;
+@use 'fonts' as font;
+
+body.dark {
+	#back-to-top {
+		box-shadow: 0 0px 5px color.$lightblue-color;
+		background-color: rgba($color: color.$lightblue-color, $alpha: 0.8);
+	}
+}
+
+#back-to-top {
+	@include font.fontStyle(medium);
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 9999;
+	font-size: 1.2rem;
+	color: color.$black2-color;
+	background-color: color.$lightblue-color;
+	width: 40px;
+	height: 50px;
+	cursor: pointer;
+	box-shadow: 0 5px 26px color.$lightblue-color;
+	transition: 0.3s;
+	border: 0;
+	border-radius: 5px;
+	display: none;
+}
+
+#back-to-top:hover {
+	background-color: color.$lightblue-hover-color;
+}

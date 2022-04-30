@@ -1,3 +1,5 @@
+@use 'colors' as color;
+
 :root {
 	scroll-behavior: smooth;
 	font-size: 16px;
@@ -8,25 +10,32 @@ body {
 	position: relative;
 	margin: auto;
 	z-index: 1;
-}
 
-body::after {
-	content: '';
-	display: block;
-	position: absolute;
-	margin: auto;
-	height: auto;
-	width: auto;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: whitesmoke;
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		margin: auto;
+		height: auto;
+		width: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: whitesmoke;
+		transition: all 0.2s ease-in-out;
+	}
 }
 
 body > * {
 	position: relative;
 	z-index: 2;
+}
+
+body.dark {
+	&::after {
+		background-color: rgba(13, 17, 57, 1);
+	}
 }
 
 .container {

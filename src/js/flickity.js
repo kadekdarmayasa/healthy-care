@@ -9,9 +9,5 @@ function flkty(elemen, wrapAround = true, autoPlay = true, prevNextButtons = tru
 
 const carouselContainer = document.querySelectorAll('.carousel-container');
 carouselContainer.forEach(function (element) {
-	if (element.classList.contains('carousel-people-testimoni')) {
-		flkty(element, true, false, false, true);
-	} else {
-		flkty(element);
-	}
+	flkty(element);
 });

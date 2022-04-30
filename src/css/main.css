@@ -69,7 +69,6 @@ body {
   margin: auto;
   z-index: 1;
 }
-
 body::after {
   content: "";
   display: block;
@@ -82,6 +81,7 @@ body::after {
   right: 0;
   bottom: 0;
   background-color: whitesmoke;
+  transition: all 0.2s ease-in-out;
 }
 
 body > * {
@@ -89,11 +89,37 @@ body > * {
   z-index: 2;
 }
 
+body.dark::after {
+  background-color: rgb(13, 17, 57);
+}
+
 .container {
   width: 85%;
 }
 
+body.dark nav {
+  background-color: rgba(18, 36, 83, 0.9);
+  backdrop-filter: blur(4px);
+}
+body.dark nav .navbar-brand h2 {
+  color: #ffffff;
+}
+body.dark nav .nav-links li a {
+  color: #ffffff;
+}
+body.dark nav .nav-links li.active a {
+  color: #0066ff;
+}
+body.dark nav .nav-links .mode span {
+  color: #ffffff;
+}
+body.dark nav .hamburger-menu span {
+  background-color: #ffffff;
+}
+
 nav {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   width: 100%;
   height: 80px;
   position: sticky;
@@ -130,9 +156,12 @@ nav .nav-links li {
   display: inline-block;
   margin-right: 3em;
 }
+nav .nav-links li.active a {
+  color: #0066ff;
+}
 nav .nav-links li a {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: rgb(95, 95, 95);
   transition: 0.3s color;
 }
@@ -140,7 +169,47 @@ nav .nav-links li a:hover {
   color: #0066ff;
 }
 nav .nav-links li:nth-child(3) {
-  margin-right: 0;
+  margin-right: 2.5em;
+}
+nav .nav-links li.mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .nav-links li.mode span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgb(95, 95, 95);
+  font-size: 14px;
+}
+nav .nav-links li.mode input {
+  opacity: 0;
+  position: absolute;
+}
+nav .nav-links li.mode #dark-toggle:checked ~ label .switcher .circle {
+  transform: translate(27px, 2px);
+}
+nav .nav-links li.mode label {
+  position: relative;
+  z-index: 10;
+}
+nav .nav-links li.mode .switcher {
+  width: 48px;
+  height: 22px;
+  margin: 0 8px;
+  border-radius: 11px;
+  background-color: #0066ff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+nav .nav-links li.mode .switcher .circle {
+  transform: translate(3px, 2px);
+  transition: all 0.3s ease;
+  height: 18px;
+  width: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 50%;
 }
 nav .hamburger-menu {
   display: none;
@@ -181,24 +250,35 @@ nav .hamburger-menu span {
   transition: 0.4s ease;
 }
 
+body.dark #beranda .heading {
+  color: #ffffff;
+}
+body.dark #beranda .hubungi-kami {
+  box-shadow: 0 0px 10px rgb(173, 196, 255);
+  background-color: rgba(173, 196, 255, 0.6);
+}
+body.dark #beranda .purpose {
+  color: rgb(140, 140, 140);
+}
+
 #beranda {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 200px;
   width: 100%;
 }
 #beranda .container {
   display: flex;
-  margin: 40px auto 0;
+  margin: 80px auto 80px;
   justify-content: center;
   align-items: center;
 }
 #beranda .container .description {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 #beranda .container .heading {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 40px;
   width: 70%;
   font-size: calc(0.6vmax + 1.2rem);
@@ -225,6 +305,7 @@ nav .hamburger-menu span {
   height: 60px;
   border-radius: 8px;
   cursor: pointer;
+  backdrop-filter: blur(5px);
   box-shadow: 0 5px 26px rgb(173, 196, 255);
   transition: 0.3s;
 }
@@ -242,7 +323,18 @@ nav .hamburger-menu span {
   height: 20px;
 }
 #beranda .container img.hero {
-  width: 50%;
+  width: 45%;
+}
+
+body.dark #tatacara .heading-2,
+body.dark #tatacara .heading-3 {
+  color: #ffffff;
+}
+body.dark #tatacara .paragraph {
+  color: rgb(140, 140, 140);
+}
+body.dark #tatacara .makanan-bergizi .kriteria li {
+  color: rgb(140, 140, 140);
 }
 
 #tatacara {
@@ -255,14 +347,14 @@ nav .hamburger-menu span {
 }
 #tatacara .container .heading-2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   font-size: calc(0.7vmax + 1rem);
   margin-bottom: 30px;
 }
 #tatacara .container .heading-3 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: calc(0.5vmax + 0.9rem);
   margin-top: 80px;
   line-height: 1.5;
@@ -366,6 +458,26 @@ nav .hamburger-menu span {
   font-size: calc(0.5vmax + 0.6rem);
 }
 
+body.dark #testimoni .heading-2 {
+  color: #ffffff;
+}
+body.dark #testimoni .paragraph {
+  color: rgb(140, 140, 140);
+}
+body.dark #testimoni .items-container .items {
+  background-color: rgba(59, 84, 147, 0.3);
+  backdrop-filter: blur(4px);
+}
+body.dark #testimoni .items-container .items .name {
+  color: #ffffff;
+}
+body.dark #testimoni .items-container .items .instagram {
+  color: rgb(140, 140, 140);
+}
+body.dark #testimoni .items-container .items .date {
+  color: #ffffff;
+}
+
 #testimoni {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -376,7 +488,7 @@ nav .hamburger-menu span {
 }
 #testimoni .container .heading-2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   font-size: calc(0.7vmax + 1rem);
   margin-bottom: 5px;
@@ -389,32 +501,34 @@ nav .hamburger-menu span {
   text-align: center;
   font-size: calc(0.5vmax + 0.7rem);
 }
-#testimoni .container .carousel-container {
+#testimoni .container .items-container {
   margin-top: 60px;
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-#testimoni .container .carousel-container .carousel-cell {
-  width: 40%;
+#testimoni .container .items-container .items {
+  width: 400px;
   height: 470px;
-  margin-right: 20px;
+  margin: 20px 10px;
+  position: relative;
   background-color: white;
-  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 20px rgba(0, 102, 255, 0.08);
   border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgb(95, 95, 95);
   padding: 1.5em 2em;
-  counter-increment: carousel-cell;
 }
-#testimoni .container .carousel-container .carousel-cell figure {
+#testimoni .container .items-container .items figure {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
 }
-#testimoni .container .carousel-container .carousel-cell figure::after {
+#testimoni .container .items-container .items figure::after {
   content: "";
   display: block;
   background-color: rgba(59, 84, 147, 0.4);
@@ -424,28 +538,50 @@ nav .hamburger-menu span {
   bottom: 0;
   right: 0;
 }
-#testimoni .container .carousel-container .carousel-cell .name {
+#testimoni .container .items-container .items .name {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: calc(0.7vmin + 1rem);
 }
-#testimoni .container .carousel-container .carousel-cell .instagram {
+#testimoni .container .items-container .items .instagram {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+  color: rgb(95, 95, 95);
 }
-#testimoni .container .carousel-container .carousel-cell .message {
+#testimoni .container .items-container .items .message {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 2;
-  font-size: calc(0.7vmin + 0.6rem);
+  font-size: calc(0.7vmin + 0.68rem);
   text-align: center;
   margin: 20px auto;
+  color: rgb(140, 140, 140);
 }
-#testimoni .container .carousel-container .carousel-cell .date {
+#testimoni .container .items-container .items .date {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   position: absolute;
   bottom: 20px;
+}
+
+body.dark footer .container .first-row h2 {
+  color: #ffffff;
+}
+body.dark footer .container .first-row .hubungi-kami .heading-3,
+body.dark footer .container .first-row .tags .heading-3,
+body.dark footer .container .first-row .tautan .heading-3 {
+  color: #ffffff;
+}
+body.dark footer .container .first-row .hubungi-kami p,
+body.dark footer .container .first-row .tags p,
+body.dark footer .container .first-row .tautan p {
+  color: rgb(140, 140, 140);
+}
+body.dark footer .container .first-row .tautan a {
+  color: rgb(140, 140, 140);
+}
+body.dark footer .container .second-row p {
+  color: rgb(140, 140, 140);
 }
 
 footer {
@@ -456,7 +592,6 @@ footer {
   padding-bottom: 20px;
 }
 footer .container {
-  color: rgb(34, 34, 34);
   margin: auto;
   width: 84%;
 }
@@ -477,7 +612,7 @@ footer .container .first-row h2 {
 footer .container .first-row h2 span {
   color: #0066ff;
 }
-footer .container .first-row .alamat .heading-3,
+footer .container .first-row .hubungi-kami .heading-3,
 footer .container .first-row .tags .heading-3,
 footer .container .first-row .tautan .heading-3 {
   font-family: "Poppins", sans-serif;
@@ -485,12 +620,41 @@ footer .container .first-row .tautan .heading-3 {
   font-size: 1.4rem;
   line-height: 2;
 }
-footer .container .first-row .alamat p,
+footer .container .first-row .hubungi-kami p,
 footer .container .first-row .tags p,
 footer .container .first-row .tautan p {
   color: rgb(95, 95, 95);
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+footer .container .first-row .hubungi-kami .alamat,
+footer .container .first-row .hubungi-kami .telp,
+footer .container .first-row .hubungi-kami .email {
+  display: flex;
+}
+footer .container .first-row .hubungi-kami .alamat {
+  margin-top: 10px;
+}
+footer .container .first-row .hubungi-kami .alamat img {
+  width: 32px;
+  margin-left: -5px;
+  margin-right: 5px;
+}
+footer .container .first-row .hubungi-kami .telp {
+  margin-top: 10px;
+}
+footer .container .first-row .hubungi-kami .telp img {
+  width: 25px;
+  margin-left: 0;
+  margin-right: 8px;
+}
+footer .container .first-row .hubungi-kami .email {
+  margin-top: 20px;
+}
+footer .container .first-row .hubungi-kami .email img {
+  width: 25px;
+  margin-left: 0px;
+  margin-right: 8px;
 }
 footer .container .first-row .tautan {
   display: flex;
@@ -498,7 +662,7 @@ footer .container .first-row .tautan {
 }
 footer .container .first-row .tautan > a {
   color: rgb(95, 95, 95);
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 footer .container .first-row .tautan > a:hover {
@@ -511,7 +675,36 @@ footer .container .second-row {
 footer .container .second-row p {
   color: rgb(95, 95, 95);
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+body.dark #back-to-top {
+  box-shadow: 0 0px 5px rgb(173, 196, 255);
+  background-color: rgba(173, 196, 255, 0.8);
+}
+
+#back-to-top {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9999;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: rgb(173, 196, 255);
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 26px rgb(173, 196, 255);
+  transition: 0.3s;
+  border: 0;
+  border-radius: 5px;
+  display: none;
+}
+
+#back-to-top:hover {
+  background-color: rgba(173, 196, 255, 0.8);
 }
 
 @media screen and (min-width: 1220px) {
@@ -529,7 +722,7 @@ footer .container .second-row p {
     align-items: center;
   }
   #beranda .container img.hero {
-    width: 50%;
+    width: 40%;
   }
 }
 @media screen and (min-width: 900px) {
@@ -542,22 +735,17 @@ footer .container .second-row p {
     margin-top: 200px;
   }
   footer .container .first-row h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-  footer .container .first-row .alamat,
+  footer .container .first-row .hubungi-kami,
 footer .container .first-row .tags,
 footer .container .first-row .tautan {
     margin-top: 20px;
   }
-  footer .container .first-row .alamat .heading-3,
+  footer .container .first-row .hubungi-kami .heading-3,
 footer .container .first-row .tags .heading-3,
 footer .container .first-row .tautan .heading-3 {
     font-size: 1.2rem;
-  }
-  footer .container .first-row .alamat p,
-footer .container .first-row .tags p {
-    font-size: 1rem;
   }
   footer .container .second-row p {
     font-size: 1rem;
@@ -576,6 +764,13 @@ footer .container .first-row .tags p {
   }
 }
 @media screen and (max-width: 768px) {
+  body.dark nav {
+    backdrop-filter: none;
+  }
+  body.dark nav .nav-links {
+    background-color: rgba(18, 36, 83, 0.9);
+  }
+
   nav {
     backdrop-filter: none;
     background-color: #ffffff;
@@ -647,7 +842,7 @@ footer .container .first-row .tags p {
   #beranda .container img.hero {
     margin: auto;
     order: 1;
-    width: 100%;
+    width: 80%;
   }
 
   #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
@@ -672,18 +867,27 @@ footer .container .first-row .tags p {
     height: 250px;
   }
 
-  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+  #tatacara ~ #testimoni .container .items-container .items {
     width: 100%;
   }
-  #tatacara ~ #testimoni .container .carousel-container .carousel-cell .message {
-    font-size: 0.9rem;
+  #tatacara ~ #testimoni .container .items-container .items .name {
+    font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 476px) {
-  #tatacara ~ #testimoni .container {
+  #tatacara .container {
     width: 88%;
   }
-  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+  #tatacara .container .carousel5M .carousel-cell,
+#tatacara .container .carousel-jenis-olahraga .carousel-cell,
+#tatacara .container .carousel-makanan-bergizi .carousel-cell {
+    height: 200px;
+  }
+
+  #tatacara ~ #testimoni .container {
+    width: 94%;
+  }
+  #tatacara ~ #testimoni .container .items-container .items {
     width: 100%;
   }
 }

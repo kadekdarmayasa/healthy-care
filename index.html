@@ -19,14 +19,24 @@
         <h2><span>Healthy</span> Care</h2>
       </div>
       <ul class="nav-links">
-        <li>
+        <li class="beranda active">
           <a href="#beranda">Beranda</a>
         </li>
-        <li>
+        <li class="tatacara">
           <a href="#tatacara">Tata Cara</a>
         </li>
-        <li>
+        <li class="testimoni">
           <a href="#testimoni">Testimoni</a>
+        </li>
+        <li class="mode">
+          <span>light</span>
+          <input type="checkbox" id="dark-toggle" onclick="myFunction()">
+          <label for="dark-toggle">
+            <div class="switcher">
+              <div class="circle"></div>
+            </div>
+          </label>
+          <span>dark</span>
         </li>
       </ul>
       <div class="hamburger-menu">
@@ -47,15 +57,15 @@
           <span>Bergizi</span>
         </h1>
         <p class="purpose">
-          Healthy Care bertujuan untuk memberi panduan kepada masyarakat mengenai tata cara menjaga kesahatan mereka
+          Healthy Care bertujuan untuk memberi panduan kepada masyarakat mengenai tata cara menjaga kesehatan mereka
           di masa pandemi Covid-19 ini.
         </p>
         <div class="hubungi-kami">
-          <a href="">Hubungi Kami</a>
+          <a href="#hubungi-kami">Hubungi Kami</a>
           <img src="src/img/send.webp" alt="send" class="send">
         </div>
       </div>
-      <img src="src/img/hero-image.webp" alt="healthy-sport" class="hero">
+      <img src="src/img/hero-image.png" alt="hero-image" class="hero">
     </div>
   </section>
   <!-- Akhir Beranda -->
@@ -267,8 +277,9 @@
       <h2 class="heading-2">Testimoni Pengunjung</h2>
       <p class="paragraph">Berikut adalah beberapa testimoni dari beberapa pengunjung website kami.</p>
       <!-- people awal -->
-      <div class="carousel-container carousel-people-testimoni">
-        <div class="carousel-cell">
+      <!-- <div class="carousel-containerr carousel-people-testimoni"> -->
+      <div class="items-container">
+        <div class="items">
           <figure>
             <img src="src/img/testimoni/john-smith.webp" alt="john-smith" />
           </figure>
@@ -280,7 +291,7 @@
           </p>
           <p class="date">20 Januari 2020</p>
         </div>
-        <div class="carousel-cell">
+        <div class="items">
           <figure>
             <img src="src/img/testimoni/jane-doe.webp" alt="jane-doe" />
           </figure>
@@ -292,19 +303,19 @@
           </p>
           <div class="date">16 Maret 2020</div>
         </div>
-        <div class="carousel-cell">
+        <div class="items">
           <figure>
             <img src="src/img/testimoni/jackson.webp" alt="jackson" />
           </figure>
           <h4 class="name">Jackson</h4>
           <p class="instagram">@jackson</p>
           <p class="message">
-            Tubuh saya merasa lebih sehat dan bugar, setelah beberapa hari kebelakang saya mengikuti anjuran yang tertera
+            Tubuh saya merasa lebih sehat dan bugar, setelh beberapa hari kebelakang saya mengikuti anjuran yang tertera
             dalam website ini.
           </p>
           <p class="date">20 Juni 2020</p>
         </div>
-        <div class="carousel-cell">
+        <div class="items">
           <figure>
             <img src="src/img/testimoni/anita-letterback.webp" alt="anita-letterback" />
           </figure>
@@ -314,7 +325,7 @@
             dirumah. </p>
           <p class="date">22 Januari 2021</p>
         </div>
-        <div class="carousel-cell">
+        <div class="items">
           <figure>
             <img src="src/img/testimoni/manuel-labor.webp" alt="manuel-labor" />
           </figure>
@@ -333,10 +344,12 @@
   <footer>
     <div class="container">
       <div class="first-row">
-        <h2><span>Healthy</span>Care</h2>
-        <div class="alamat">
-          <h3 class="heading-3">IKDAP Organization</h3>
-          <p>Jalan Ratna, Gang Sandat, No 2, <br> Tonja, Denpasar Utara</p>
+        <h2><span>Healthy</span> Care</h2>
+        <div class="tautan">
+          <h3 class="heading-3">Tautan</h3>
+          <a href="#beranda">Beranda</a>
+          <a href="#tatacara">Tata Cara</a>
+          <a href="#testimoni">Testimoni</a>
         </div>
         <div class="tags">
           <h3 class="heading-3">Tags</h3>
@@ -344,11 +357,20 @@
           <p>Olahraga</p>
           <p>Makanan Sehat</p>
         </div>
-        <div class="tautan">
-          <h3 class="heading-3">Tautan</h3>
-          <a href="#beranda">Beranda</a>
-          <a href="#tatacara">Tata Cara</a>
-          <a href="#testimoni">Testimoni</a>
+        <div class="hubungi-kami" id="hubungi-kami">
+          <h3 class="heading-3">Hubungi Kami</h3>
+          <div class="alamat">
+            <img src="src/img/location.png" alt="location">
+            <p>Jalan Ratna, Gang Sandat, No 2, <br> Tonja, Denpasar Utara</p>
+          </div>
+          <div class="telp">
+            <img src="src/img/phone.png" alt="phone">
+            <p>087852773125</p>
+          </div>
+          <div class="email">
+            <img src="src/img/email.png" alt="email">
+            <p>info@healthycare.com</p>
+          </div>
         </div>
       </div>
       <div class="second-row">
@@ -357,6 +379,10 @@
     </div>
   </footer>
   <!-- footer -->
+
+  <!-- scroll on top -->
+  <button class="btn" type="button" id="back-to-top"><span>&#8593</span></button>
+  <!-- scroll on top -->
 
   <script src="src/node_modules/flickity/dist/flickity.pkgd.min.js"></script>
   <script src="src/js/script.js"></script>

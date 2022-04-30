@@ -1,6 +1,40 @@
 @use 'fonts' as font;
 @use 'colors' as color;
 
+body.dark {
+	footer {
+		.container {
+			.first-row {
+				h2 {
+					color: color.$white-color;
+				}
+
+				.hubungi-kami,
+				.tags,
+				.tautan {
+					.heading-3 {
+						color: color.$white-color;
+					}
+
+					p {
+						color: color.$grey2-color;
+					}
+				}
+
+				.tautan a {
+					color: color.$grey2-color;
+				}
+			}
+
+			.second-row {
+				p {
+					color: color.$grey2-color;
+				}
+			}
+		}
+	}
+}
+
 footer {
 	@include font.fontStyle();
 	margin-top: 300px;
@@ -8,7 +42,6 @@ footer {
 	padding-bottom: 20px;
 
 	.container {
-		color: color.$black1-color;
 		margin: auto;
 		width: 84%;
 
@@ -29,7 +62,7 @@ footer {
 				}
 			}
 
-			.alamat,
+			.hubungi-kami,
 			.tags,
 			.tautan {
 				.heading-3 {
@@ -41,7 +74,48 @@ footer {
 				p {
 					color: color.$grey-color;
 					line-height: 1.8;
-					font-size: 1.1rem;
+					font-size: 1rem;
+				}
+			}
+
+			.hubungi-kami {
+				.alamat,
+				.telp,
+				.email {
+					display: flex;
+				}
+			}
+
+			.hubungi-kami {
+				.alamat {
+					margin-top: 10px;
+					img {
+						width: 32px;
+						margin-left: -5px;
+						margin-right: 5px;
+					}
+				}
+			}
+
+			.hubungi-kami {
+				.telp {
+					margin-top: 10px;
+					img {
+						width: 25px;
+						margin-left: 0;
+						margin-right: 8px;
+					}
+				}
+			}
+
+			.hubungi-kami {
+				.email {
+					margin-top: 20px;
+					img {
+						width: 25px;
+						margin-left: 0px;
+						margin-right: 8px;
+					}
 				}
 			}
 
@@ -50,7 +124,7 @@ footer {
 				flex-direction: column;
 				& > a {
 					color: color.$grey-color;
-					font-size: 1.1rem;
+					font-size: 1rem;
 					line-height: 1.8;
 
 					&:hover {
@@ -67,7 +141,7 @@ footer {
 			p {
 				color: color.$grey-color;
 				line-height: 1.8;
-				font-size: 1.1rem;
+				font-size: 1rem;
 			}
 		}
 	}

@@ -28,7 +28,7 @@
 		.container {
 			align-items: center;
 			img.hero {
-				width: 50%;
+				width: 40%;
 			}
 		}
 	}
@@ -51,23 +51,15 @@
 		.container {
 			.first-row {
 				h2 {
-					font-size: 1.6rem;
-					margin-bottom: 20px;
+					margin-bottom: 10px;
 				}
 
-				.alamat,
+				.hubungi-kami,
 				.tags,
 				.tautan {
 					margin-top: 20px;
 					.heading-3 {
 						font-size: 1.2rem;
-					}
-				}
-
-				.alamat,
-				.tags {
-					p {
-						font-size: 1rem;
 					}
 				}
 			}
@@ -107,6 +99,16 @@
 }
 
 @media screen and (max-width: 768px) {
+	body.dark {
+		nav {
+			backdrop-filter: none;
+
+			.nav-links {
+				background-color: rgba(18, 36, 83, 0.9);
+			}
+		}
+	}
+
 	nav {
 		backdrop-filter: none;
 		background-color: color.$white-color;
@@ -187,7 +189,7 @@
 			img.hero {
 				margin: auto;
 				order: 1;
-				width: 100%;
+				width: 80%;
 			}
 		}
 	}
@@ -229,12 +231,12 @@
 
 	#tatacara ~ #testimoni {
 		.container {
-			.carousel-container {
-				.carousel-cell {
+			.items-container {
+				.items {
 					width: 100%;
 
-					.message {
-						font-size: 0.9rem;
+					.name {
+						font-size: 1.3rem;
 					}
 				}
 			}
@@ -243,11 +245,25 @@
 }
 
 @media screen and (max-width: 476px) {
-	#tatacara ~ #testimoni {
+	#tatacara {
 		.container {
 			width: 88%;
-			.carousel-container {
+
+			.carousel5M,
+			.carousel-jenis-olahraga,
+			.carousel-makanan-bergizi {
 				.carousel-cell {
+					height: 200px;
+				}
+			}
+		}
+	}
+
+	#tatacara ~ #testimoni {
+		.container {
+			width: 94%;
+			.items-container {
+				.items {
 					width: 100%;
 				}
 			}
