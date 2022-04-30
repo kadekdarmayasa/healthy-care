@@ -1,32 +1,32 @@
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
-  font-weight: 700;
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+	font-weight: 700;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+	font-weight: 600;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
-  font-weight: 500;
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+	font-weight: 500;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+	font-weight: 400;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Light.ttf") format("truetype");
-  font-weight: 300;
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Light.ttf') format('truetype');
+	font-weight: 300;
 }
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 h1,
@@ -38,858 +38,858 @@ h6,
 p,
 ol,
 ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 img {
-  width: 100%;
-  height: 100%;
-  line-height: 1;
+	width: 100%;
+	height: 100%;
+	line-height: 1;
 }
 
 :root {
-  scroll-behavior: smooth;
-  font-size: 16px;
+	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 body {
-  max-width: 1600px;
-  position: relative;
-  margin: auto;
-  z-index: 1;
+	max-width: 1600px;
+	position: relative;
+	margin: auto;
+	z-index: 1;
 }
 body::after {
-  content: "";
-  display: block;
-  position: absolute;
-  margin: auto;
-  height: auto;
-  width: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: whitesmoke;
-  transition: all 0.2s ease-in-out;
+	content: '';
+	display: block;
+	position: absolute;
+	margin: auto;
+	height: auto;
+	width: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: whitesmoke;
+	transition: all 0.2s ease-in-out;
 }
 
 body > * {
-  position: relative;
-  z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 body.dark::after {
-  background-color: rgb(13, 17, 57);
+	background-color: rgb(13, 17, 57);
 }
 
 .container {
-  width: 85%;
+	width: 85%;
 }
 
 body.dark nav {
-  background-color: rgba(18, 36, 83, 0.9);
-  backdrop-filter: blur(4px);
+	background-color: rgba(18, 36, 83, 0.9);
+	backdrop-filter: blur(4px);
 }
 body.dark nav .navbar-brand h2 {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark nav .nav-links li a {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark nav .nav-links li.active a {
-  color: #0066ff;
+	color: #0066ff;
 }
 body.dark nav .nav-links .mode span {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark nav .hamburger-menu span {
-  background-color: #ffffff;
+	background-color: #ffffff;
 }
 
 nav {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  width: 100%;
-  height: 80px;
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	width: 100%;
+	height: 80px;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	background-color: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(8px);
 }
 nav.active {
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.07);
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.07);
 }
 nav .container {
-  height: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 nav .navbar-brand h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: calc(2vmin + 0.8rem);
-  color: rgb(34, 34, 34);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: calc(2vmin + 0.8rem);
+	color: rgb(34, 34, 34);
 }
 nav .navbar-brand h2 span {
-  color: #0066ff;
+	color: #0066ff;
 }
 nav .nav-links {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
 }
 nav .nav-links li {
-  display: inline-block;
-  margin-right: 3em;
+	display: inline-block;
+	margin-right: 3em;
 }
 nav .nav-links li.active a {
-  color: #0066ff;
+	color: #0066ff;
 }
 nav .nav-links li a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: rgb(95, 95, 95);
-  transition: 0.3s color;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	color: rgb(95, 95, 95);
+	transition: 0.3s color;
 }
 nav .nav-links li a:hover {
-  color: #0066ff;
+	color: #0066ff;
 }
 nav .nav-links li:nth-child(3) {
-  margin-right: 2.5em;
+	margin-right: 2.5em;
 }
 nav .nav-links li.mode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 nav .nav-links li.mode span {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: rgb(95, 95, 95);
-  font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	color: rgb(95, 95, 95);
+	font-size: 14px;
 }
 nav .nav-links li.mode input {
-  opacity: 0;
-  position: absolute;
+	opacity: 0;
+	position: absolute;
 }
 nav .nav-links li.mode #dark-toggle:checked ~ label .switcher .circle {
-  transform: translate(27px, 2px);
+	transform: translate(27px, 2px);
 }
 nav .nav-links li.mode label {
-  position: relative;
-  z-index: 10;
+	position: relative;
+	z-index: 10;
 }
 nav .nav-links li.mode .switcher {
-  width: 48px;
-  height: 22px;
-  margin: 0 8px;
-  border-radius: 11px;
-  background-color: #0066ff;
-  transition: all 0.3s ease;
-  cursor: pointer;
+	width: 48px;
+	height: 22px;
+	margin: 0 8px;
+	border-radius: 11px;
+	background-color: #0066ff;
+	transition: all 0.3s ease;
+	cursor: pointer;
 }
 nav .nav-links li.mode .switcher .circle {
-  transform: translate(3px, 2px);
-  transition: all 0.3s ease;
-  height: 18px;
-  width: 18px;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border-radius: 50%;
+	transform: translate(3px, 2px);
+	transition: all 0.3s ease;
+	height: 18px;
+	width: 18px;
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(12px);
+	border-radius: 50%;
 }
 nav .hamburger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 17px;
-  width: 28px;
-  cursor: pointer;
-  position: relative;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 17px;
+	width: 28px;
+	cursor: pointer;
+	position: relative;
 }
-nav .hamburger-menu input[type=checkbox] {
-  position: absolute;
-  height: 28px;
-  top: -5px;
-  left: -6px;
-  width: 32px;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
+nav .hamburger-menu input[type='checkbox'] {
+	position: absolute;
+	height: 28px;
+	top: -5px;
+	left: -6px;
+	width: 32px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 2;
 }
-nav .hamburger-menu input[type=checkbox]:checked ~ span:nth-child(2) {
-  background-color: #0066ff;
-  transform: translateY(8px) rotate(225deg);
+nav .hamburger-menu input[type='checkbox']:checked ~ span:nth-child(2) {
+	background-color: #0066ff;
+	transform: translateY(8px) rotate(225deg);
 }
-nav .hamburger-menu input[type=checkbox]:checked ~ span:nth-child(3) {
-  transform: scale(0);
+nav .hamburger-menu input[type='checkbox']:checked ~ span:nth-child(3) {
+	transform: scale(0);
 }
-nav .hamburger-menu input[type=checkbox]:checked ~ span:nth-child(4) {
-  background-color: #0066ff;
-  transform: translateY(-7px) rotate(-225deg);
+nav .hamburger-menu input[type='checkbox']:checked ~ span:nth-child(4) {
+	background-color: #0066ff;
+	transform: translateY(-7px) rotate(-225deg);
 }
 nav .hamburger-menu span {
-  background-color: #000;
-  display: inline-block;
-  height: 3px;
-  width: 28px;
-  border-radius: 3px;
-  transition: 0.4s ease;
+	background-color: #000;
+	display: inline-block;
+	height: 3px;
+	width: 28px;
+	border-radius: 3px;
+	transition: 0.4s ease;
 }
 
 body.dark #beranda .heading {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark #beranda .hubungi-kami {
-  box-shadow: 0 0px 10px rgb(173, 196, 255);
-  background-color: rgba(173, 196, 255, 0.6);
+	box-shadow: 0 0px 10px rgb(173, 196, 255);
+	background-color: rgba(173, 196, 255, 0.6);
 }
 body.dark #beranda .purpose {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 
 #beranda {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  scroll-margin-top: 200px;
-  width: 100%;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	scroll-margin-top: 200px;
+	width: 100%;
 }
 #beranda .container {
-  display: flex;
-  margin: 80px auto 80px;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	margin: 80px auto 80px;
+	justify-content: center;
+	align-items: center;
 }
 #beranda .container .description {
-  margin-top: 80px;
+	margin-top: 80px;
 }
 #beranda .container .heading {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  margin-bottom: 40px;
-  width: 70%;
-  font-size: calc(0.6vmax + 1.2rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	margin-bottom: 40px;
+	width: 70%;
+	font-size: calc(0.6vmax + 1.2rem);
 }
 #beranda .container .heading span {
-  color: #0066ff;
+	color: #0066ff;
 }
 #beranda .container .purpose {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin-bottom: 20px;
-  width: 80%;
-  color: rgb(95, 95, 95);
-  line-height: 1.8;
-  font-size: calc(0.5vmax + 0.7rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	margin-bottom: 20px;
+	width: 80%;
+	color: rgb(95, 95, 95);
+	line-height: 1.8;
+	font-size: calc(0.5vmax + 0.7rem);
 }
 #beranda .container .hubungi-kami {
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(173, 196, 255);
-  width: 200px;
-  height: 60px;
-  border-radius: 8px;
-  cursor: pointer;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 5px 26px rgb(173, 196, 255);
-  transition: 0.3s;
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(173, 196, 255);
+	width: 200px;
+	height: 60px;
+	border-radius: 8px;
+	cursor: pointer;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 5px 26px rgb(173, 196, 255);
+	transition: 0.3s;
 }
 #beranda .container .hubungi-kami:hover {
-  background-color: rgba(173, 196, 255, 0.8);
+	background-color: rgba(173, 196, 255, 0.8);
 }
 #beranda .container .hubungi-kami a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: #000;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	color: #000;
 }
 #beranda .container .hubungi-kami img.send {
-  margin-left: 10px;
-  width: 20px;
-  height: 20px;
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
 }
 #beranda .container img.hero {
-  width: 45%;
+	width: 45%;
 }
 
 body.dark #tatacara .heading-2,
 body.dark #tatacara .heading-3 {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark #tatacara .paragraph {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 body.dark #tatacara .makanan-bergizi .kriteria li {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 
 #tatacara {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  scroll-margin-top: 150px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	scroll-margin-top: 150px;
 }
 #tatacara .container {
-  margin: 100px auto 0;
+	margin: 100px auto 0;
 }
 #tatacara .container .heading-2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  font-size: calc(0.7vmax + 1rem);
-  margin-bottom: 30px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	font-size: calc(0.7vmax + 1rem);
+	margin-bottom: 30px;
 }
 #tatacara .container .heading-3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: calc(0.5vmax + 0.9rem);
-  margin-top: 80px;
-  line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: calc(0.5vmax + 0.9rem);
+	margin-top: 80px;
+	line-height: 1.5;
 }
 #tatacara .container .paragraph {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: rgb(95, 95, 95);
-  line-height: 2;
-  text-align: justify;
-  font-size: calc(0.5vmax + 0.7rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	color: rgb(95, 95, 95);
+	line-height: 2;
+	text-align: justify;
+	font-size: calc(0.5vmax + 0.7rem);
 }
 #tatacara .container .paragraph:nth-child(4) {
-  margin-top: 50px;
+	margin-top: 50px;
 }
 #tatacara .container .carousel5M .carousel-cell,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell {
-  width: 30%;
-  height: 250px;
-  margin-top: 30px;
-  margin-right: 20px;
-  border-radius: 18px;
-  counter-increment: carousel-cell;
+	width: 30%;
+	height: 250px;
+	margin-top: 30px;
+	margin-right: 20px;
+	border-radius: 18px;
+	counter-increment: carousel-cell;
 }
 #tatacara .container .carousel5M .carousel-cell figure,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 18px;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 18px;
 }
 #tatacara .container .carousel5M .carousel-cell figure::after,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure::after,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure::after {
-  content: "";
-  display: block;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  position: absolute;
-  border-radius: 18px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  height: auto;
+	content: '';
+	display: block;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+	position: absolute;
+	border-radius: 18px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
 }
 #tatacara .container .carousel5M .carousel-cell figure img,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure img,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure img {
-  border-radius: 18px;
+	border-radius: 18px;
 }
 #tatacara .container .carousel5M .carousel-cell figure figcaption,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure figcaption,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure figcaption {
-  position: absolute;
-  color: #ffffff;
-  bottom: 18px;
-  right: 18px;
-  z-index: 2;
-  text-align: right;
+	position: absolute;
+	color: #ffffff;
+	bottom: 18px;
+	right: 18px;
+	z-index: 2;
+	text-align: right;
 }
 #tatacara .container .carousel5M .carousel-cell figure figcaption h4,
 #tatacara .container .carousel-jenis-olahraga .carousel-cell figure figcaption h4,
 #tatacara .container .carousel-makanan-bergizi .carousel-cell figure figcaption h4 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: calc(0.5vmax + 0.7rem);
-  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 2px 2px 10px rgba(255, 255, 255, 0.3);
-  letter-spacing: 1px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: calc(0.5vmax + 0.7rem);
+	text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 2px 2px 10px rgba(255, 255, 255, 0.3);
+	letter-spacing: 1px;
 }
 #tatacara .container .jenis-olahraga .paragraph {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 #tatacara .container .makanan-bergizi .paragraph {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 #tatacara .container .makanan-bergizi .kriteria {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 #tatacara .container .makanan-bergizi .kriteria li {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  list-style: none;
-  padding: 6px 10px 5px 35px;
-  background: url("../img/checklist.webp") no-repeat;
-  background-position-x: left;
-  background-position-y: center;
-  vertical-align: middle;
-  color: rgb(95, 95, 95);
-  margin-bottom: 8px;
-  font-size: calc(0.5vmax + 0.7rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	list-style: none;
+	padding: 6px 10px 5px 35px;
+	background: url('../img/checklist.webp') no-repeat;
+	background-position-x: left;
+	background-position-y: center;
+	vertical-align: middle;
+	color: rgb(95, 95, 95);
+	margin-bottom: 8px;
+	font-size: calc(0.5vmax + 0.7rem);
 }
 #tatacara .container .makanan-bergizi .carousel-makanan-bergizi figcaption p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 2px 2px 10px rgba(255, 255, 255, 0.3);
-  font-size: calc(0.5vmax + 0.6rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	text-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 2px 2px 10px rgba(255, 255, 255, 0.3);
+	font-size: calc(0.5vmax + 0.6rem);
 }
 
 body.dark #testimoni .heading-2 {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark #testimoni .paragraph {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 body.dark #testimoni .items-container .items {
-  background-color: rgba(59, 84, 147, 0.3);
-  backdrop-filter: blur(4px);
+	background-color: rgba(59, 84, 147, 0.3);
+	backdrop-filter: blur(4px);
 }
 body.dark #testimoni .items-container .items .name {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark #testimoni .items-container .items .instagram {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 body.dark #testimoni .items-container .items .date {
-  color: #ffffff;
+	color: #ffffff;
 }
 
 #testimoni {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  scroll-margin-top: 150px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	scroll-margin-top: 150px;
 }
 #testimoni .container {
-  margin: 150px auto 50px;
+	margin: 150px auto 50px;
 }
 #testimoni .container .heading-2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  font-size: calc(0.7vmax + 1rem);
-  margin-bottom: 5px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	font-size: calc(0.7vmax + 1rem);
+	margin-bottom: 5px;
 }
 #testimoni .container .paragraph {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  color: rgb(95, 95, 95);
-  line-height: 2;
-  text-align: center;
-  font-size: calc(0.5vmax + 0.7rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	color: rgb(95, 95, 95);
+	line-height: 2;
+	text-align: center;
+	font-size: calc(0.5vmax + 0.7rem);
 }
 #testimoni .container .items-container {
-  margin-top: 60px;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+	margin-top: 60px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 #testimoni .container .items-container .items {
-  width: 400px;
-  height: 470px;
-  margin: 20px 10px;
-  position: relative;
-  background-color: white;
-  box-shadow: 0 10px 20px rgba(0, 102, 255, 0.08);
-  border-radius: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5em 2em;
+	width: 400px;
+	height: 470px;
+	margin: 20px 10px;
+	position: relative;
+	background-color: white;
+	box-shadow: 0 10px 20px rgba(0, 102, 255, 0.08);
+	border-radius: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5em 2em;
 }
 #testimoni .container .items-container .items figure {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
 }
 #testimoni .container .items-container .items figure::after {
-  content: "";
-  display: block;
-  background-color: rgba(59, 84, 147, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+	content: '';
+	display: block;
+	background-color: rgba(59, 84, 147, 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 #testimoni .container .items-container .items .name {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: calc(0.7vmin + 1rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: calc(0.7vmin + 1rem);
 }
 #testimoni .container .items-container .items .instagram {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  color: rgb(95, 95, 95);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: rgb(95, 95, 95);
 }
 #testimoni .container .items-container .items .message {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  line-height: 2;
-  font-size: calc(0.7vmin + 0.68rem);
-  text-align: center;
-  margin: 20px auto;
-  color: rgb(140, 140, 140);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	line-height: 2;
+	font-size: calc(0.7vmin + 0.68rem);
+	text-align: center;
+	margin: 20px auto;
+	color: rgb(140, 140, 140);
 }
 #testimoni .container .items-container .items .date {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  position: absolute;
-  bottom: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	position: absolute;
+	bottom: 20px;
 }
 
 body.dark footer .container .first-row h2 {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark footer .container .first-row .hubungi-kami .heading-3,
 body.dark footer .container .first-row .tags .heading-3,
 body.dark footer .container .first-row .tautan .heading-3 {
-  color: #ffffff;
+	color: #ffffff;
 }
 body.dark footer .container .first-row .hubungi-kami p,
 body.dark footer .container .first-row .tags p,
 body.dark footer .container .first-row .tautan p {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 body.dark footer .container .first-row .tautan a {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 body.dark footer .container .second-row p {
-  color: rgb(140, 140, 140);
+	color: rgb(140, 140, 140);
 }
 
 footer {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin-top: 300px;
-  text-align: center;
-  padding-bottom: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	margin-top: 300px;
+	text-align: center;
+	padding-bottom: 20px;
 }
 footer .container {
-  margin: auto;
-  width: 84%;
+	margin: auto;
+	width: 84%;
 }
 footer .container .first-row {
-  display: flex;
-  text-align: left;
-  margin: auto;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  align-items: flex-start;
-  flex-direction: column;
+	display: flex;
+	text-align: left;
+	margin: auto;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	align-items: flex-start;
+	flex-direction: column;
 }
 footer .container .first-row h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: calc(2vmin + 0.8rem);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: calc(2vmin + 0.8rem);
 }
 footer .container .first-row h2 span {
-  color: #0066ff;
+	color: #0066ff;
 }
 footer .container .first-row .hubungi-kami .heading-3,
 footer .container .first-row .tags .heading-3,
 footer .container .first-row .tautan .heading-3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 2;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 2;
 }
 footer .container .first-row .hubungi-kami p,
 footer .container .first-row .tags p,
 footer .container .first-row .tautan p {
-  color: rgb(95, 95, 95);
-  line-height: 1.8;
-  font-size: 1rem;
+	color: rgb(95, 95, 95);
+	line-height: 1.8;
+	font-size: 1rem;
 }
 footer .container .first-row .hubungi-kami .alamat,
 footer .container .first-row .hubungi-kami .telp,
 footer .container .first-row .hubungi-kami .email {
-  display: flex;
+	display: flex;
 }
 footer .container .first-row .hubungi-kami .alamat {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 footer .container .first-row .hubungi-kami .alamat img {
-  width: 32px;
-  margin-left: -5px;
-  margin-right: 5px;
+	width: 32px;
+	margin-left: -5px;
+	margin-right: 5px;
 }
 footer .container .first-row .hubungi-kami .telp {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 footer .container .first-row .hubungi-kami .telp img {
-  width: 25px;
-  margin-left: 0;
-  margin-right: 8px;
+	width: 25px;
+	margin-left: 0;
+	margin-right: 8px;
 }
 footer .container .first-row .hubungi-kami .email {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 footer .container .first-row .hubungi-kami .email img {
-  width: 25px;
-  margin-left: 0px;
-  margin-right: 8px;
+	width: 25px;
+	margin-left: 0px;
+	margin-right: 8px;
 }
 footer .container .first-row .tautan {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 footer .container .first-row .tautan > a {
-  color: rgb(95, 95, 95);
-  font-size: 1rem;
-  line-height: 1.8;
+	color: rgb(95, 95, 95);
+	font-size: 1rem;
+	line-height: 1.8;
 }
 footer .container .first-row .tautan > a:hover {
-  color: #0066ff;
+	color: #0066ff;
 }
 footer .container .second-row {
-  text-align: center;
-  margin-top: 60px;
+	text-align: center;
+	margin-top: 60px;
 }
 footer .container .second-row p {
-  color: rgb(95, 95, 95);
-  line-height: 1.8;
-  font-size: 1rem;
+	color: rgb(95, 95, 95);
+	line-height: 1.8;
+	font-size: 1rem;
 }
 
 body.dark #back-to-top {
-  box-shadow: 0 0px 5px rgb(173, 196, 255);
-  background-color: rgba(173, 196, 255, 0.8);
+	box-shadow: 0 0px 5px rgb(173, 196, 255);
+	background-color: rgba(173, 196, 255, 0.8);
 }
 
 #back-to-top {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  z-index: 9999;
-  font-size: 1.2rem;
-  color: #000;
-  background-color: rgb(173, 196, 255);
-  width: 40px;
-  height: 50px;
-  cursor: pointer;
-  box-shadow: 0 5px 26px rgb(173, 196, 255);
-  transition: 0.3s;
-  border: 0;
-  border-radius: 5px;
-  display: none;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 9999;
+	font-size: 1.2rem;
+	color: #000;
+	background-color: rgb(173, 196, 255);
+	width: 40px;
+	height: 50px;
+	cursor: pointer;
+	box-shadow: 0 5px 26px rgb(173, 196, 255);
+	transition: 0.3s;
+	border: 0;
+	border-radius: 5px;
+	display: none;
 }
 
 #back-to-top:hover {
-  background-color: rgba(173, 196, 255, 0.8);
+	background-color: rgba(173, 196, 255, 0.8);
 }
 
 @media screen and (min-width: 1220px) {
-  #beranda .container .heading {
-    margin-top: -120px;
-  }
+	#beranda .container .heading {
+		margin-top: -120px;
+	}
 }
 @media screen and (min-width: 1330px) {
-  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
-    width: 30%;
-  }
+	#tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+		width: 30%;
+	}
 }
 @media screen and (max-width: 1220px) {
-  #beranda .container {
-    align-items: center;
-  }
-  #beranda .container img.hero {
-    width: 40%;
-  }
+	#beranda .container {
+		align-items: center;
+	}
+	#beranda .container img.hero {
+		width: 40%;
+	}
 }
 @media screen and (min-width: 900px) {
-  footer .container .first-row {
-    flex-direction: row;
-  }
+	footer .container .first-row {
+		flex-direction: row;
+	}
 }
 @media screen and (max-width: 900px) {
-  footer {
-    margin-top: 200px;
-  }
-  footer .container .first-row h2 {
-    margin-bottom: 10px;
-  }
-  footer .container .first-row .hubungi-kami,
-footer .container .first-row .tags,
-footer .container .first-row .tautan {
-    margin-top: 20px;
-  }
-  footer .container .first-row .hubungi-kami .heading-3,
-footer .container .first-row .tags .heading-3,
-footer .container .first-row .tautan .heading-3 {
-    font-size: 1.2rem;
-  }
-  footer .container .second-row p {
-    font-size: 1rem;
-  }
+	footer {
+		margin-top: 200px;
+	}
+	footer .container .first-row h2 {
+		margin-bottom: 10px;
+	}
+	footer .container .first-row .hubungi-kami,
+	footer .container .first-row .tags,
+	footer .container .first-row .tautan {
+		margin-top: 20px;
+	}
+	footer .container .first-row .hubungi-kami .heading-3,
+	footer .container .first-row .tags .heading-3,
+	footer .container .first-row .tautan .heading-3 {
+		font-size: 1.2rem;
+	}
+	footer .container .second-row p {
+		font-size: 1rem;
+	}
 }
 @media screen and (max-width: 992px) {
-  #tatacara .container .carousel5M .carousel-cell,
-#tatacara .container .carousel-jenis-olahraga .carousel-cell,
-#tatacara .container .carousel-makanan-bergizi .carousel-cell {
-    width: 50%;
-    height: 250px;
-  }
+	#tatacara .container .carousel5M .carousel-cell,
+	#tatacara .container .carousel-jenis-olahraga .carousel-cell,
+	#tatacara .container .carousel-makanan-bergizi .carousel-cell {
+		width: 50%;
+		height: 250px;
+	}
 
-  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
-    width: 50%;
-  }
+	#tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+		width: 50%;
+	}
 }
 @media screen and (max-width: 768px) {
-  body.dark nav {
-    backdrop-filter: none;
-  }
-  body.dark nav .nav-links {
-    background-color: rgba(18, 36, 83, 0.9);
-  }
+	body.dark nav {
+		backdrop-filter: none;
+	}
+	body.dark nav .nav-links {
+		background-color: rgba(18, 36, 83, 0.9);
+	}
 
-  nav {
-    backdrop-filter: none;
-    background-color: #ffffff;
-  }
-  nav .nav-links {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    position: fixed;
-    display: flex;
-    top: 80px;
-    right: 120%;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
-    width: auto;
-    height: auto;
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.07);
-    backdrop-filter: blur(8px);
-    transition: 0.3s ease;
-  }
-  nav .nav-links.active {
-    opacity: 1;
-    right: 0;
-  }
-  nav .nav-links li {
-    margin-right: 0;
-  }
-  nav .nav-links li a {
-    text-align: left;
-    font-size: 1.2rem;
-  }
-  nav .nav-links li:nth-child(3) {
-    margin-right: 0;
-  }
-  nav .hamburger-menu {
-    display: flex;
-  }
+	nav {
+		backdrop-filter: none;
+		background-color: #ffffff;
+	}
+	nav .nav-links {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		position: fixed;
+		display: flex;
+		top: 80px;
+		right: 120%;
+		bottom: 0;
+		left: 0;
+		z-index: 4;
+		width: auto;
+		height: auto;
+		opacity: 0;
+		background-color: rgba(255, 255, 255, 0.8);
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.07);
+		backdrop-filter: blur(8px);
+		transition: 0.3s ease;
+	}
+	nav .nav-links.active {
+		opacity: 1;
+		right: 0;
+	}
+	nav .nav-links li {
+		margin-right: 0;
+	}
+	nav .nav-links li a {
+		text-align: left;
+		font-size: 1.2rem;
+	}
+	nav .nav-links li:nth-child(3) {
+		margin-right: 0;
+	}
+	nav .hamburger-menu {
+		display: flex;
+	}
 
-  #beranda .container {
-    flex-direction: column;
-    text-align: center;
-    align-items: flex-start;
-  }
-  #beranda .container .description {
-    margin-top: 0;
-    order: 2;
-  }
-  #beranda .container .description > div:not(:last-child) {
-    width: 100%;
-  }
-  #beranda .container .heading {
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    width: 80%;
-  }
-  #beranda .container .purpose {
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  #beranda .container .hubungi-kami {
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 50px;
-  }
-  #beranda .container img.hero {
-    margin: auto;
-    order: 1;
-    width: 80%;
-  }
+	#beranda .container {
+		flex-direction: column;
+		text-align: center;
+		align-items: flex-start;
+	}
+	#beranda .container .description {
+		margin-top: 0;
+		order: 2;
+	}
+	#beranda .container .description > div:not(:last-child) {
+		width: 100%;
+	}
+	#beranda .container .heading {
+		margin: auto;
+		margin-top: 50px;
+		margin-bottom: 40px;
+		width: 80%;
+	}
+	#beranda .container .purpose {
+		margin: auto;
+		margin-bottom: 20px;
+	}
+	#beranda .container .hubungi-kami {
+		margin: auto;
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+	#beranda .container img.hero {
+		margin: auto;
+		order: 1;
+		width: 80%;
+	}
 
-  #tatacara ~ #testimoni .container .carousel-container .carousel-cell {
-    width: 70%;
-  }
+	#tatacara ~ #testimoni .container .carousel-container .carousel-cell {
+		width: 70%;
+	}
 }
 @media screen and (max-width: 576px) {
-  #beranda .container {
-    width: 100%;
-  }
+	#beranda .container {
+		width: 100%;
+	}
 
-  #tatacara .container .carousel5M .flickity-prev-next-button,
-#tatacara .container .carousel-jenis-olahraga .flickity-prev-next-button,
-#tatacara .container .carousel-makanan-bergizi .flickity-prev-next-button {
-    width: 25px;
-    height: 25px;
-  }
-  #tatacara .container .carousel5M .carousel-cell,
-#tatacara .container .carousel-jenis-olahraga .carousel-cell,
-#tatacara .container .carousel-makanan-bergizi .carousel-cell {
-    width: 100%;
-    height: 250px;
-  }
+	#tatacara .container .carousel5M .flickity-prev-next-button,
+	#tatacara .container .carousel-jenis-olahraga .flickity-prev-next-button,
+	#tatacara .container .carousel-makanan-bergizi .flickity-prev-next-button {
+		width: 25px;
+		height: 25px;
+	}
+	#tatacara .container .carousel5M .carousel-cell,
+	#tatacara .container .carousel-jenis-olahraga .carousel-cell,
+	#tatacara .container .carousel-makanan-bergizi .carousel-cell {
+		width: 100%;
+		height: 250px;
+	}
 
-  #tatacara ~ #testimoni .container .items-container .items {
-    width: 100%;
-  }
-  #tatacara ~ #testimoni .container .items-container .items .name {
-    font-size: 1.3rem;
-  }
+	#tatacara ~ #testimoni .container .items-container .items {
+		width: 100%;
+	}
+	#tatacara ~ #testimoni .container .items-container .items .name {
+		font-size: 1.3rem;
+	}
 }
 @media screen and (max-width: 476px) {
-  #tatacara .container {
-    width: 88%;
-  }
-  #tatacara .container .carousel5M .carousel-cell,
-#tatacara .container .carousel-jenis-olahraga .carousel-cell,
-#tatacara .container .carousel-makanan-bergizi .carousel-cell {
-    height: 200px;
-  }
+	#tatacara .container {
+		width: 88%;
+	}
+	#tatacara .container .carousel5M .carousel-cell,
+	#tatacara .container .carousel-jenis-olahraga .carousel-cell,
+	#tatacara .container .carousel-makanan-bergizi .carousel-cell {
+		height: 200px;
+	}
 
-  #tatacara ~ #testimoni .container {
-    width: 94%;
-  }
-  #tatacara ~ #testimoni .container .items-container .items {
-    width: 100%;
-  }
+	#tatacara ~ #testimoni .container {
+		width: 94%;
+	}
+	#tatacara ~ #testimoni .container .items-container .items {
+		width: 100%;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */
