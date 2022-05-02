@@ -17,6 +17,8 @@ window.addEventListener('scroll', function () {
 	}
 
 	backToTop();
+
+	activeLink();
 });
 
 // Back to top logic
@@ -37,8 +39,7 @@ btnBackToTop.addEventListener('click', function () {
 // Nav lInk Active Logic
 const sections = document.querySelectorAll('section');
 const navLi = navLinks.querySelectorAll('li:not(:last-child)');
-
-window.addEventListener('scroll', () => {
+function activeLink() {
 	let current = '';
 
 	sections.forEach((section) => {
@@ -54,10 +55,12 @@ window.addEventListener('scroll', () => {
 			li.classList.add('active');
 		}
 	});
-});
+}
 
 // dark mode logic
-function myFunction() {
+const darkToggle = document.getElementById('dark-toggle');
+
+darkToggle.addEventListener('click', function () {
 	if (!document.body.classList.contains('dark')) {
 		document.body.classList.add('dark');
 		localStorage.setItem('dark', 'active');
@@ -65,10 +68,11 @@ function myFunction() {
 		document.body.classList.remove('dark');
 		localStorage.setItem('dark', '');
 	}
-}
+});
 
 window.addEventListener('load', () => {
 	if (localStorage.getItem('dark') == 'active') {
+		darkToggle.checked = true;
 		document.body.classList.add('dark');
 	} else {
 		document.body.classList.remove('dark');

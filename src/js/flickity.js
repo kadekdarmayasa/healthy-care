@@ -1,7 +1,6 @@
-function flkty(elemen, wrapAround = true, autoPlay = true, prevNextButtons = true, pageDots = true) {
+function flkty(elemen, wrapAround = true, prevNextButtons = true, pageDots = true) {
 	return new Flickity(elemen, {
 		wrapAround: wrapAround,
-		autoPlay: autoPlay,
 		prevNextButtons: prevNextButtons,
 		pageDots: pageDots,
 	});
