@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "flickity": "^3.0.0"
+    "flickity": "^2.2.0"
   }
 }
